@@ -1,0 +1,159 @@
+@import './default'; 
+@import './variables';
+
+
+#app {
+    width: 500px;
+    margin: 20px  auto 0;
+    height: auto;
+    .card-container-section {
+        background-color: $grid6Color;
+        display: flex;
+        justify-content: space-between;
+        .card-list-section {
+            ul {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                list-style: none;
+                li {
+                    &.grid-item {
+                        color:$defaultTextColor;
+                        font-weight: 700;
+                        font-size: 32px;
+                        padding: 20px 45px;
+                    }
+                    &.grid-item-1 {
+                        background-color: $grid3Color;
+                    }
+                    &.grid-item-2 {
+                        background-color: $grid1Color;
+                    }
+                    &.grid-item-3 {
+                        background-color: $grid5Color;
+                    }
+                    &.grid-item-4 {
+                        background-color: $grid1Color;
+                    }
+                    &.grid-item-5 {
+                        background-color: $grid3Color;
+                    }
+                    &.grid-item-6 {
+                        background-color: $grid5Color;
+                    }
+                    &.grid-item-7 {
+                        background-color: $grid5Color;
+                    }
+                    &.grid-item-8 {
+                        background-color: $grid3Color;
+                    }
+                    &.grid-item-9 {
+                        background-color: $grid7Color;
+                    }
+                }
+            }
+        }
+        .card-btn-section {
+            display: flex;
+            flex-direction: column;
+            margin:10px auto 0;
+            button {
+                display: inline-block;
+                background-color: $grid8Color;
+                color:$defaultTextColor;
+                font-size: 14px;
+                padding: 5px 20px;
+                border-radius: 5px;
+                border-bottom: 5px solid $grid1Color;
+                &.card-shuffle-btn {
+                    margin-bottom: 20px;
+                }
+                &:hover {
+                    border-top: 4px solid $grid1Color;
+                    border-bottom: 0px solid $grid1Color;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+   #app {
+       width: 100%;
+       margin: unset;
+       .card-container-section {
+           flex-direction: column-reverse;
+           background-color: $defaultTextColor;
+           .card-list-section {
+                ul {
+                    grid-template-columns: auto;
+                    li {
+                        color:#000  !important;
+                        background-color: #EEEEEE  !important;
+                        position: relative;
+                        margin-bottom: 10px;
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            padding: 37px 5px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            
+                        }
+                        &.grid-item-1 {
+                            &::before {
+                                background-color: $grid3Color;
+                            }
+                        }
+                        &.grid-item-2 {
+                            &::before {
+                                background-color: $grid1Color;
+                            }
+                        }
+                        &.grid-item-3 {
+                            &::before {
+                                background-color: $grid5Color;
+                            }
+                        }
+                        &.grid-item-4 {
+                            &::before {
+                                background-color: $grid1Color;
+                            }
+                        }
+                        &.grid-item-5 {
+                            &::before {
+                                background-color: $grid3Color;
+                            }
+                        }
+                        &.grid-item-6 {
+                            &::before {
+                                background-color: $grid5Color;
+                            }
+                        }
+                        &.grid-item-7 {
+                            &::before {
+                                background-color: $grid5Color;
+                            }
+                        }
+                        &.grid-item-8 {
+                            &::before {
+                                background-color: $grid3Color;
+                            }
+                        }
+                        &.grid-item-9 {
+                            &::before {
+                                background-color: $grid7Color;
+                            }
+                        }
+                    }
+                }
+            }
+            .card-btn-section {
+                margin: 0 auto;
+                display: block;
+            }
+       }
+   }
+}
+    
